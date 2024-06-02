@@ -137,7 +137,7 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
                                     className="flex-1 text-right"
                                 />
                                 <span className="flex-1 pl-4">
-                                    Sheet Diameter
+                                    Mean Sheet Diameter
                                 </span>
                             </div>
 
