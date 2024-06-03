@@ -25,7 +25,7 @@ function App() {
 
     return (
         <main className="flex h-screen flex-col bg-slate-800 pb-8 font-sans text-white">
-            <nav className="min-h-16 bg-slate-900 p-4">
+            <nav className="bg-slate-900 p-2">
                 <a href="#" onClick={reset} className="flex items-center">
                     {tankType !== null && (
                         <svg
