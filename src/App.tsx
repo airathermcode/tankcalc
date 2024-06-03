@@ -25,12 +25,8 @@ function App() {
 
     return (
         <main className="flex h-screen flex-col bg-slate-800 pb-8 font-sans text-white">
-            <nav className="bg-slate-900 p-2">
-                <a
-                    href="#"
-                    onClick={reset}
-                    className="flex items-center justify-between"
-                >
+            <nav className="min-h-16 bg-slate-900 p-4">
+                <a href="#" onClick={reset} className="flex items-center">
                     {tankType !== null && (
                         <svg
                             width="24"
@@ -45,12 +41,12 @@ function App() {
                             />
                         </svg>
                     )}
-                    {tankType === null && <div id="pad_right"></div>}
-                    <img
-                        src="/aira_logo.png"
-                        width="160px"
-                        alt="Airatherm Logo"
-                    />
+                    {tankType === null && (
+                        <div id="pad_right" className="min-w-6"></div>
+                    )}
+                    <h1 className="pl-4 font-sans text-3xl font-extrabold">
+                        TankCalc
+                    </h1>
                 </a>
             </nav>
             {tankType === null && (
