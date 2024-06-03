@@ -117,9 +117,9 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
                         <div className="mathdisplay grid w-full text-sm transition-opacity">
                             <span
                                 id="result"
-                                className="h-16 text-center text-xl font-bold"
+                                className="h-16 text-center text-3xl font-bold text-green-300"
                             >
-                                {`Sheet cut length = ${result}mm`}
+                                {`${result}mm`}
                             </span>
                             <div className="flex">
                                 <TeX
@@ -141,7 +141,7 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
                                 </span>
                             </div>
 
-                            <div className="flex">
+                            <div className="flex font-bold text-green-300">
                                 <TeX
                                     math={`${sheetDiameter}\\times\\pi+1=${result}`}
                                     className="flex-1 text-right"
@@ -212,9 +212,9 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
                     <div className="mathdisplay grid w-full text-sm transition-opacity">
                         <span
                             id="result"
-                            className="h-16 text-center text-xl font-bold"
+                            className="h-16 text-center text-3xl font-bold text-green-300"
                         >
-                            {`Sheet cut length = ${result}mm`}
+                            {`${result}mm`}
                         </span>
                         <div className="flex">
                             <TeX
@@ -237,10 +237,12 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
                                 math={`${headInsideDiameter}+${sheetThickness}=${sheetDiameter}`}
                                 className="flex-1 text-right"
                             />
-                            <span className="flex-1 pl-4">Median</span>
+                            <span className="flex-1 pl-4">
+                                Mean Sheet Diameter
+                            </span>
                         </div>
 
-                        <div className="flex">
+                        <div className="flex font-bold text-green-300">
                             <TeX
                                 math={`${sheetDiameter}\\times\\pi+1=` + result}
                                 className="flex-1 text-right"
