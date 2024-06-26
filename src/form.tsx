@@ -64,7 +64,7 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
         const hd = hc / Math.PI;
         const id = hd - 2 * ht;
         const sd = id + st;
-        const result = Math.ceil(sd * Math.PI + 1);
+        const result = Math.round(sd * Math.PI + 1);
         setHeadDiameter(String(Math.round(hd)));
         setHeadInsideDiameter(String(Math.round(id)));
         setSheetDiameter(String(Math.round(sd)));
