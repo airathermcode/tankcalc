@@ -64,7 +64,7 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
         const hd = hc / Math.PI;
         const id = hd - 2 * ht;
         const sd = id + st;
-        const result = Math.round(sd * Math.PI + 1);
+        const result = Math.round(sd * Math.PI);
         setHeadDiameter(String(Math.round(hd)));
         setHeadInsideDiameter(String(Math.round(id)));
         setSheetDiameter(String(Math.round(sd)));
@@ -244,12 +244,10 @@ export default function TankForm({ tankType }: { tankType: Tank }) {
 
                         <div className="flex font-bold text-green-300">
                             <TeX
-                                math={`${sheetDiameter}\\times\\pi+1=` + result}
+                                math={`${sheetDiameter}\\times\\pi=` + result}
                                 className="flex-1 text-right"
                             />
-                            <span className="flex-1 pl-4">
-                                Result (1mm clearance)
-                            </span>
+                            <span className="flex-1 pl-4">Result</span>
                         </div>
                     </div>
                 )}
